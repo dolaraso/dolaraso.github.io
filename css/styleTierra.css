@@ -1,0 +1,98 @@
+section {
+  display: grid;
+  grid-template-areas:
+    "planetaContenido planetaContenido"
+    "introduccion introduccion"
+    "caracteristicas curiosidades";
+}
+
+#planetaContenido {
+  grid-area: planetaContenido;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#tierra {
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+  background: url(../assets/images/mapasPlanetas/mapaTierra.webp);
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+  animation: world 20s linear infinite;
+}
+
+#planetaContenido p {
+  font-size: 2em;
+  padding: 1em 0;
+  color: #ffffff;
+}
+
+h1 {
+  color: #7843E6;
+  text-shadow: 1px 3px 4px rgba(19, 224, 251, 1), -2px 2px 2px rgba(255, 0, 255, 0.7);
+}
+
+@keyframes world {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -1000px;
+  }
+}
+
+#caracteristicas p {
+  margin: 1em 0;
+}
+#astronauta {
+  height: 16em;
+  background: url(../assets/images/cosmonauta.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#curiosidades p {
+  margin: 1em 0;
+}
+
+#btn1:hover {
+  background-image: url(../assets/images/imagesNav/2venus.webp);
+}
+
+#btn2:hover {
+  background-image: url(../assets/images/imagesNav/4marte.webp);
+}
+
+#btn3:hover {
+  scale: 2;
+  background-image: url(../assets/images/imagesNav/laLuna.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  content: none;
+}
+@media screen and (max-width: 800px) {
+
+  section {
+    display: grid;
+    grid-template-areas:
+      "planetaContenido"
+      "introduccion"
+      "caracteristicas"
+      "curiosidades";
+  }
+
+  #planetaContenido p {
+    font-size: 1.4em;
+  }
+
+  #tierra {
+    height: 15em;
+    width: 15em;
+  }
+
+}

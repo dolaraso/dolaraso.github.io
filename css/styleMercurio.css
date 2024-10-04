@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "Bobby";
+  src: url(../assets/fonts/Bobby-Jones-Soft-Outline.woff);
+}
+section {
+  display: grid;
+  grid-template-areas:
+    "planetaContenido planetaContenido"
+    "introduccion introduccion"
+    "caracteristicas curiosidades";
+}
+
+#planetaContenido {
+  grid-area: planetaContenido;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#mercurio {
+  background: url(../assets/images/mapasPlanetas/mapaMercurio.webp);
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: bottom;
+  box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+
+  animation: mercurio 15s linear infinite;
+}
+
+@keyframes mercurio {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -800px;
+  }
+}
+#planetaContenido p {
+  font-size: 2em;
+  padding: 1em 0;
+  color: #ffffff;
+}
+
+h1 {
+  color: #7843e6;
+  font-family: 'Bobby';
+  text-shadow: -2px 3px 4px rgba(127, 212, 235, 1),
+    0px -2px 3px rgba(181, 178, 178, 1);
+}
+
+#introduccion{
+  margin-top: 0;
+}
+#astronauta {
+  height: 16em;
+  background: url(../assets/images/pintura-astronauta.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#btn1:hover {
+  background-image: url(../assets/images/imagesNav/sol.webp);
+}
+
+#btn2:hover {
+  background-image: url(../assets/images/imagesNav/2venus.webp);
+}
+@media screen and (max-width: 800px) {
+
+  section {
+    display: grid;
+    grid-template-areas:
+      "planetaContenido"
+      "introduccion"
+      "caracteristicas"
+      "curiosidades";
+  }
+
+  #planetaContenido p {
+    font-size: 1.4em;
+  }
+
+  #tierra {
+    height: 15em;
+    width: 15em;
+  }
+}

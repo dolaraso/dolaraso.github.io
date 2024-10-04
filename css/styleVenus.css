@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "ZingRust";
+  src: url(../assets/fonts/zing.rust-demo-base.woff);
+}
+section {
+  display: grid;
+  grid-template-areas: 
+    "planetaContenido planetaContenido"
+    "introduccion introduccion"
+    "caracteristicas curiosidades";
+}
+
+#planetaContenido {
+  grid-area: planetaContenido;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#venus {
+  background: url(../assets/images/mapasPlanetas/mapaVenus.webp);
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0 0 20px #000, inset -40px -10px 20px rgba(3, 32, 56, 0.7);
+  animation: venus 15s linear infinite;
+}
+@keyframes venus {
+  0% {
+    background-position-x: 0;
+  }
+
+  100% {
+    background-position-x: -800px;
+  }
+}
+#planetaContenido p {
+  font-size: 2em;
+  text-align: center;
+  padding: 1em 0;
+  color: #ffffff;
+}
+h1{
+  font-family: "ZingRust";
+  text-shadow: 3px 3px 4px rgba(136, 66, 15, 1),-1px 3px 9px rgba(255, 128, 0, 1);
+  color: #3c396d;
+}
+
+#caracteristicas p {
+  margin: 1em 0;
+}
+#astronauta {
+  height: 16em;
+  background: url(../assets/images/alien-ovni.webp);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#curiosidades p {
+  margin: 1em 0;
+}
+
+#introduccion{
+  margin-top: 0;
+}
+
+#btn1:hover {
+  background-image: url(../assets/images/imagesNav/1mercurio.webp);
+}
+
+#btn2:hover {
+  background-image: url(../assets/images/imagesNav/3tierra.webp);
+}
+@media screen and (max-width: 800px) {
+
+  section {
+    display: grid;
+    grid-template-areas:
+      "planetaContenido"
+      "introduccion"
+      "caracteristicas"
+      "curiosidades";
+  }
+
+  #planetaContenido p {
+    font-size: 1.3em;
+  }
+
+  #tierra {
+    height: 15em;
+    width: 15em;
+  }
+
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuerpos Celestes</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #001f3f;
+            color: white;
+        }
+        header {
+            background-color: #0074D9;
+            padding: 20px;
+            text-align: center;
+        }
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #001f3f;
+            border-radius: 5px;
+        }
+        h2 {
+            color: #FF851B;
+        }
+        .planet {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 10px;
+            position: relative;
+            animation-duration: 10s; /* Duración de la animación */
+        }
+        #mercurio { background-color: #B0B0B0; animation-name: rotate; }
+        #venus { background-color: #E6B500; animation-name: rotate; }
+        #tierra { background-color: #0074D9; animation-name: rotate; }
+        #marte { background-color: #FF4136; animation-name: rotate; }
+        #jupiter { background-color: #FF851B; animation-name: rotate; }
+        #saturno { background-color: #FFD700; animation-name: rotate; }
+        #urano { background-color: #00FFFF; animation-name: rotate; }
+        #neptuno { background-color: #0000FF; animation-name: rotate; }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .orbit {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            border: 1px dashed white;
+            position: absolute;
+            top: calc(50% - 150px);
+            left: calc(50% - 150px);
+            z-index: -1; /* Para que la órbita esté detrás del planeta */
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Cuerpos Celestes</h1>
+</header>
+
+<section>
+    <h2>Planetas del Sistema Solar</h2>
+    <div style="position: relative;">
+        <div class="orbit"></div>
+        <div id="mercurio" class="planet"></div>
+    </div>
+    <div style="position: relative;">
+        <div class="orbit"></div>
+        <div id="venus" class="planet"></div>
+    </div>
+    <div style="position: relative;">
+        <div class="orbit"></div>
+        <div id="tierra" class="planet"></div>
+    </div>
+    <div style="position: relative;">
+        <div class="orbit"></div>
+        <div id="marte" class="planet"></div>
+    </div>
+    <div style="position: relative;">
+        <div class="orbit"></div>
+        <div id="jupiter" class="planet"></div>
+    </div>
+    <div style="position: relative;">
+        <div class="orbit"></div>
+        <div id="saturno" class="planet"></div>
+    </div>
+    <div style="position: relative;">
+        <div class="orbit"></div>
+        <div id="urano" class="planet"></div>
+    </div>
+    <div style="position: relative;">
+        <div class="orbit"></div>
+        <div id="neptuno" class="planet"></div>
+    </div>
+
+</section>
+
+<section>
+    <h2>Descripción de los Planetas</h2>
+    <ul>
+        <li><strong>Mercurio:</strong> El planeta más cercano al Sol, pequeño y rocoso.</li>
+        <li><strong>Venus:</strong> Conocido como el "planeta gemelo" de la Tierra por su tamaño similar.</li>
+        <li><strong>Tierra:</strong> El único planeta conocido con vida.</li>
+        <li><strong>Marte:</strong> Conocido como el "planeta rojo".</li>
+        <li><strong>Júpiter:</strong> El planeta más grande del sistema solar.</li>
+        <li><strong>Saturno:</strong> Famoso por sus impresionantes anillos.</li>
+        <li><strong>Urano:</strong> Un gigante gaseoso con un eje de rotación inusual.</li>
+        <li><strong>Neptuno:</strong> Conocido por sus vientos fuertes y su color azul intenso.</li>
+    </ul>
+
+</section>
+
+<footer style="text-align:center; padding:10px; background-color:#0074D9;">
+    © 2024 Cuerpos Celestes
+</footer>
+
+<script>
+// Aquí se pueden agregar animaciones adicionales o interactividad si se desea
+document.querySelectorAll('.planet').forEach(function(planet) {
+    planet.addEventListener('click', function() {
+      alert('Has hecho clic en ' + this.id.charAt(0).toUpperCase() + this.id.slice(1));
+    });
+});
+</script>
+
+</body>
+</html>
