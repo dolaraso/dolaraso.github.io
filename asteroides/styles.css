@@ -1,0 +1,287 @@
+/* Fuente y estilos básicos */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0d0d0d;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/*Logos*/
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: "IndieFlower";
+}
+
+.logo::after {
+  content: "";
+  position: relative;
+  z-index: -5;
+  left: -5.2em;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  border: 4px solid;
+}
+
+.logo span:nth-of-type(1) {
+  font-size: 1.6em;
+}
+
+.logo span:nth-of-type(3) {
+  font-size: 1.6em;
+}
+
+.logo span:nth-of-type(4) {
+  font-size: 1.6em;
+}
+
+.logo span:nth-of-type(6) {
+  font-size: 1.6em;
+}
+
+.planet {
+  animation: planet-rotate 10s linear infinite;
+}
+
+.planet.left {
+  font-size: 1.2em;
+  transform-origin: 156% 37%;
+}
+
+.planet.right {
+  font-size: 1.2em;
+  transform-origin: -55% 43%;
+}
+
+@keyframes planet-rotate {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+#logoCentro img {
+  width: 10em;
+  border-radius: 50%;
+  justify-content: flex-end; /* Alinea a la derecha */
+  padding-right: 20px;
+}
+
+#logotipo {
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+#logoCentro img {
+  width: 10em;
+  justify-content: flex-end;
+  border-radius: 50%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+nav ul li {
+  display: inline-block;
+  font-family: "IndieFlower";
+}
+
+#btnMenu {
+  background-color: #ff4500;
+  border: none;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+main {
+  font-family: "IndieFlower";
+}
+
+.menu {
+  width: 100%;
+  margin-left: -100%;
+  transition: all 0.5s;
+}
+
+/* Encabezado */
+header {
+  background: linear-gradient(to right, #020024);
+  padding: 20px 0;
+  text-align: center;
+}
+
+.header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header h1 {
+  color: #fff;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+  color: #ffcc00;
+}
+
+/* Secciones */
+section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h2 {
+  color: #ffcc00;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+/* Introducción */
+#intro p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.intro-img {
+  width: 80%;
+  max-width: 600px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Tarjetas de Asteroides */
+.asteroid-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.asteroid-card {
+  background-color: #1a1a1a;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.asteroid-card:hover {
+  transform: scale(1.05);
+}
+
+.asteroid-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.asteroid-info {
+  padding: 20px;
+}
+
+.asteroid-info h3 {
+  color: #ffcc00;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.asteroid-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Datos en tiempo real */
+#api-nasa {
+  background-color: #121212;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+#datos-nasa ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#datos-nasa li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #e0e0e0;
+}
+
+/* Pie de página */
+footer {
+  background: #0b0b0b;
+  color: #808080;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .asteroid-grid {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin-bottom: 10px;
+  }
+
+  .intro-img {
+    width: 100%;
+  }
+}

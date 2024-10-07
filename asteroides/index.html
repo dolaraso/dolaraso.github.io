@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asteroides Cercanos a la Tierra</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+   
+    
+    <div id="logoCentro">
+       <a href="../index.html">
+      <div class="logo">
+        <span>C</span>
+        <span class="planet left">&#129680;</span>
+        <span>S</span>
+        <span>M</span>
+        <span class="planet right">&#129680;</span>
+        <span>S</span>
+      </div>
+    </a>
+    </div>
+  </header>
+  <header>
+    <div class="header-content">
+      <h1>Asteroides Cercanos a la Tierra</h1>
+      <nav>
+        <ul>
+          <li><a href="#intro">Inicio</a></li>
+          <li><a href="#lista-asteroides">Asteroides</a></li>
+          <li><a href="#api-nasa">Datos en Tiempo Real</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sección de introducción -->
+  <section id="intro">
+    <div class="container">
+      <h2>¿Qué son los NEAs?</h2>
+      <p>Los asteroides cercanos a la Tierra (NEAs) son cuerpos rocosos que orbitan cerca del planeta. Algunos de ellos podrían representar una amenaza potencial, mientras que otros simplemente cruzan sin peligro. NASA realiza un seguimiento constante de estos asteroides para predecir sus trayectorias.</p>
+      <img src="assets/img/images.jpeg" alt="Sistema solar con asteroide" class="intro-img">
+    </div>
+  </section>
+
+  <!-- Sección de asteroides destacados -->
+  <section id="lista-asteroides">
+    <div class="container">
+      <h2>Asteroides Destacados</h2>
+      <div class="asteroid-grid">
+        <div class="asteroid-card">
+          <img src="assets/img/99942 Apophis.jpg" alt="99942 Apophis">
+          <div class="asteroid-info">
+            <h3>99942 Apophis</h3>
+            <p>Pasará cerca de la Tierra en 2029. Aunque se pensaba que podría impactar, ahora se sabe que no representa amenaza.</p>
+          </div>
+        </div>
+        <div class="asteroid-card">
+          <img src="assets/img/AG5.jpeg" alt="2011 AG5">
+          <div class="asteroid-info">
+            <h3>2011 AG5</h3>
+            <p>Este asteroide, de 140 metros, pasó muy cerca de la Tierra en 2011. Su tamaño lo hace menos peligroso que otros más grandes.</p>
+          </div>
+        </div>
+        <div class="asteroid-card">
+          <img src="assets/img/asy.webp" alt="2004 MN4">
+          <div class="asteroid-info">
+            <h3>2004 MN4</h3>
+            <p>Cruza la órbita de la Tierra y será observado en el futuro debido a su trayectoria cercana.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sección de datos en tiempo real de la NASA -->
+  <section id="api-nasa">
+    <div class="container">
+      <h2>Datos en Tiempo Real de NEAs</h2>
+      <p>Consulta los datos más recientes sobre asteroides cercanos a la Tierra proporcionados por la NASA:</p>
+      <div id="datos-nasa"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 - Información basada en datos de la NASA. Desarrollado para el NASA Space Apps Challenge.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
